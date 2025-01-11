@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  springboot:
+    container_name: blog_app_api
+    build: .
+    environment:
+      DATASOURCE_URL: jdbc:postgresql://ep-silent-surf-a5m9hxcg.us-east-2.aws.neon.tech/blog-db
+      DATASOURCE_USERNAME: blog-db_owner
+      DATASOURCE_PASSWORD: B2Wklog9cIKa
+      FRONTEND_URL: https://deploy-blog-app-frontend.vercel.app
+    ports:
+      - "8080:8080"
